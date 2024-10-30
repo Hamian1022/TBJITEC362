@@ -1,0 +1,145 @@
+/* Root variables */
+/* Define custom properties (variables) for the root element */
+:root {
+    --font-family-inter: 'Inter', sans-serif; /* Font family variable for 'Inter' font */
+}
+
+/* Global styles */
+/* Reset margin and padding for the body element */
+body {
+    margin: 0;
+    padding: 0;
+}
+
+/* Headings */
+/* Style for h2 headings */
+h2 {
+    font-size: 25px; /* Set font size for h2 */
+}
+
+/* Style for paragraph text */
+p {
+    font-size: 18px; /* Set font size for paragraphs */
+}
+
+/* Style for h3 headings */
+h3 {
+    font-size: 22px; /* Set font size for h3 */
+}
+
+/* Split section layout */
+/* Flex container for split section layout */
+.split-section {
+    display: flex; /* Use flexbox for layout */
+    height: 400px; /* Set height for the section */
+}
+
+/* Style for text content within split section */
+.text-content {
+    flex: 1; /* Allow text content to grow and fill available space */
+    display: flex; /* Use flexbox for layout */
+    flex-direction: column; /* Arrange children in a column */
+    justify-content: center; /* Center children vertically */
+    padding: 20px; /* Add padding */
+    box-sizing: border-box; /* Include padding and border in element's total width and height */
+}
+
+/* Style for image content within split section */
+.image-content {
+    flex: 1; /* Allow image content to grow and fill available space */
+    display: flex; /* Use flexbox for layout */
+    justify-content: center; /* Center children horizontally */
+    align-items: center; /* Center children vertically */
+    overflow: hidden; /* Hide overflow content */
+}
+
+/* Style for images within image content */
+.image-content img {
+    width: 100%; /* Set image width to 100% of container */
+    height: 100%; /* Set image height to 100% of container */
+    object-fit: cover; /* Cover the container with the image */
+}
+
+/* Navigation styles */
+/* Flex container for navigation */
+nav {
+    display: flex; /* Use flexbox for layout */
+    justify-content: center; /* Center children horizontally */
+    align-items: center; /* Center children vertically */
+    flex-grow: 1; /* Allow navigation to grow and fill available space */
+}
+
+/* Style for navigation list */
+nav ul {
+    list-style-type: none; /* Remove default list styling */
+    padding: 0; /* Remove padding */
+    margin: 0; /* Remove margin */
+    display: flex; /* Use flexbox for layout */
+}
+
+/* Style for navigation list items */
+nav ul li {
+    margin: 0 15px; /* Add horizontal margin between items */
+}
+
+/* Style for navigation links */
+nav ul li a {
+    text-decoration: none; /* Remove underline from links */
+    color: black; /* Set link color to black */
+    font-weight: bold; /* Make link text bold */
+    font-size: 22px;
+}
+
+/* General footer styles */
+footer {
+    background-color: #EDC68D; /* Set background color */
+}
+
+
+/* Style for h2 and p elements within footer */
+footer h2, footer p {
+    margin: 0; /* Remove margin */
+    padding: 5px 0; /* Add vertical padding */
+    
+}
+
+.logofooter {
+    justify-items: center;
+    align-items: center;
+}
+
+/* Header styles */
+/* Flex container for header */
+header {
+    display: flex; /* Use flexbox for layout */
+    align-items: center; /* Center children vertically */
+    justify-content: space-between; /* Distribute space between children */
+    padding: 0 20px; /* Add horizontal padding */
+    background-color: #EDC68D; /* Set background color */
+}
+
+/* Style for h1 within header */
+header h1 {
+    margin: 0; /* Remove margin */
+}
+
+/* Style for images within header h1 */
+header h1 img {
+    display: block; /* Display image as block element */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
