@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <script src="searchbar.js"></script>
     <link rel="stylesheet" href="styles.css">
     <meta charset="UTF-8">
     <meta name="description" content="The Breakfast Jawn offers delicious breakfast options, exceptional catering services, and career resources for students.">
@@ -105,6 +106,8 @@
                 <li><a href="Catering.html">Catering</a></li>
             </ul>
         </nav>
+        <input type="text" id="searchInput" placeholder="Search...">
+        <button onclick="searchFunction()">Search</button>
     </header>
 
     <main>
@@ -120,39 +123,39 @@
 
         <section class="cateringform">
             <h2>Interest Form</h2>
-            <form>
+            <form id="cateringForm">
                 <label for="first-name">First Name:</label>
-                <input type="text" id="first-name" name="first-name"><br>
+                <input type="text" id="first-name" name="first-name" required><br>
 
                 <label for="last-name">Last Name:</label>
-                <input type="text" id="last-name" name="last-name"><br>
+                <input type="text" id="last-name" name="last-name" required><br>
 
                 <label for="email">Email:</label>
-                <input type="email" id="email" name="email"><br>
+                <input type="email" id="email" name="email" required><br>
 
                 <label for="phone">Phone Number:</label>
-                <input type="tel" id="phone" name="phone"><br>
+                <input type="tel" id="phone" name="phone" required><br>
 
                 <label for="company">Company:</label>
                 <input type="text" id="company" name="company"><br>
 
                 <label for="event-date">Event Date:</label>
-                <input type="date" id="event-date" name="event-date"><br>
+                <input type="date" id="event-date" name="event-date" required><br>
 
                 <label for="start-time">Start Time:</label>
-                <input type="time" id="start-time" name="start-time"><br>
+                <input type="time" id="start-time" name="start-time" required><br>
 
                 <label for="end-time">End Time:</label>
-                <input type="time" id="end-time" name="end-time"><br>
+                <input type="time" id="end-time" name="end-time" required><br>
 
                 <label for="number-of-people">Number of People:</label>
-                <input type="number" id="number-of-people" name="number-of-people"><br>
+                <input type="number" id="number-of-people" name="number-of-people" required><br>
 
                 <label for="event-description">Event Description:</label>
-                <textarea id="event-description" name="event-description"></textarea><br>
+                <textarea id="event-description" name="event-description" required></textarea><br>
 
                 <label for="nature-of-event">Nature of this Event:</label>
-                <input type="text" id="nature-of-event" name="nature-of-event"><br>
+                <input type="text" id="nature-of-event" name="nature-of-event" required><br>
 
                 <input type="submit" value="Submit">
             </form>
@@ -179,6 +182,26 @@
             </nav>
         </div>
     </footer>
+
+    <script>
+        document.getElementById('cateringForm').addEventListener('submit', function(event) {
+            const firstName = document.getElementById('first-name').value;
+            const lastName = document.getElementById('last-name').value;
+            const email = document.getElementById('email').value;
+            const phone = document.getElementById('phone').value;
+            const eventDate = document.getElementById('event-date').value;
+            const startTime = document.getElementById('start-time').value;
+            const endTime = document.getElementById('end-time').value;
+            const numberOfPeople = document.getElementById('number-of-people').value;
+            const eventDescription = document.getElementById('event-description').value;
+            const natureOfEvent = document.getElementById('nature-of-event').value;
+
+            if (!firstName || !lastName || !email || !phone || !eventDate || !startTime || !endTime || !numberOfPeople || !eventDescription || !natureOfEvent) {
+                alert('Please fill out all required fields.');
+                event.preventDefault();
+            }
+        });
+    </script>
 </body>
 </html>
 
